@@ -1,0 +1,144 @@
+*,::before,::after {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:hsl(216, 12%, 8%);
+    height: 100vh;
+    font-family: 'Overpass', sans-serif;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 450px;
+    background-color: #1f2630;
+    padding:35px;
+    border-radius: 35px;
+}
+
+.star {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width: 55px;
+    height:55px;
+    border-radius: 30px;
+    background-color: hsl(213, 19%, 18%);
+    margin-bottom: 10px;
+}
+.box img {
+    width: 20px;
+    height: 20px;
+}
+.visible {
+    visibility:hidden;
+}
+.box-back {
+    padding:35px;
+    width: 450px;
+    right: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+.box-back a {
+    color: hsl(25, 97%, 53%);
+    margin-top: 30px;
+    background-color: hsl(213, 19%, 18%);
+    padding:6px 20px;
+    border-radius:20px;
+}
+.box-back h1 {
+    padding-top:30px;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+.box-back p {
+    text-align: center;
+
+}
+
+.box-back img{
+    width: 180px;
+    height:auto;
+}
+
+h2 {
+    font-size:1.8rem;
+    color:white;
+    padding-top: 25px ;
+}
+p{
+    font-size:16px;
+    color:hsl(217, 12%, 63%);
+    padding: 10px 0;
+    line-height:1.6rem;
+}
+
+.container-note {
+    color:hsl(217, 12%, 63%);
+    padding: 20px 0;
+}
+
+.note {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width: 55px;
+    height:55px;
+    border-radius: 30px;
+    background-color: hsl(213, 19%, 18%);
+    cursor: pointer;
+}
+.note:hover {
+    background-color:hsl(217, 12%, 63%);
+    color:#fff;
+}
+form {
+    display: flex;
+    justify-content: space-between;
+}
+input {
+    display: none;
+}
+input[type=radio]:checked + .note{
+    background-color:hsl(25, 97%, 53%);
+    color:#fff;
+}
+button {
+    width: 100%;
+    margin-top: 10px;
+    background-color:hsl(25, 97%, 53%);
+    border:none;
+    padding: 15px 0;
+    color:white;
+    font-size:15px;
+    font-weight:bold;
+    letter-spacing:3px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color:#fff;
+    color:hsl(25, 97%, 53%);
+}
+
+@media screen and (max-width:460px){
+    .box {
+        width: 350px;
+    }
+    .box-back {
+        width: 350px;
+    }
+}
